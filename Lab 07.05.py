@@ -179,21 +179,21 @@ class BST:
                 if current.data == data and current.left != None and current.right != None:
                     #print("case 4")
                     #find_max of min
-                    min = current.left
-                    while min:
-                        if min.right == None:
-                            min = min.data
+                    val_min = current.left
+                    while val_min:
+                        if val_min.right == None:
+                            val_min = val_min.data
                             break
-                        min = min.right
-                    #print(min)
+                        val_min = val_min.right
+                    #print(val_min)
 
                     if self.root.data == data:
-                        self.delete(min)
-                        self.root.data = min
+                        self.delete(val_min)
+                        self.root.data = val_min
 
                     if current.data == data:
-                        self.delete(min)
-                        current.data = min
+                        self.delete(val_min)
+                        current.data = val_min
                     break
 
                 #case not found
